@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_pages/inicio'
-
+  root 'static_pages#inicio'
   get 'static_pages/form_visita'
 
   # The priority is based upon order of creation: first created -> highest priority.
