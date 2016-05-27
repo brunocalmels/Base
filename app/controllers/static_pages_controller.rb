@@ -4,4 +4,11 @@ class StaticPagesController < ApplicationController
 
   def form_visita
   end
+
+  def form_cliente
+  end
+
+  def ayuda
+  end
+
 end

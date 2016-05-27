@@ -1,0 +1,19 @@
+
+@font-face {
+	   font-family: 'geometos-rounded';
+	   font-style: normal;
+	   src: url('//macherit.com/wp-content/uploads/useanyfont/160426080009Geometos-Rounded.eot');
+	   src: local('geometos-rounded'), url('//macherit.com/wp-content/uploads/useanyfont/160426080009Geometos-Rounded.eot') format('embedded-opentype'), url('//macherit.com/wp-content/uploads/useanyfont/160426080009Geometos-Rounded.woff') format('woff');
+}
+@font-face {
+	   font-family: 'multicolore';
+	   font-style: normal;
+	   src: url('//macherit.com/wp-content/uploads/useanyfont/160426080218Multicolore.eot');
+	   src: local('multicolore'), url('//macherit.com/wp-content/uploads/useanyfont/160426080218Multicolore.eot') format('embedded-opentype'), url('//macherit.com/wp-content/uploads/useanyfont/160426080218Multicolore.woff') format('woff');
+}
+h2, h3 {
+    font-family: 'multicolore' !important;
+}
+h1{
+	font-family: 'geometos-rounded' !important;
+}

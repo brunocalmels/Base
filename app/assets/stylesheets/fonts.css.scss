@@ -1,0 +1,19 @@
+
+@font-face {
+	   font-family: 'geometos-rounded';
+	   font-style: normal;
+	   src: font-url('Geometos-Rounded.eot');
+	   src: local('geometos-rounded'), font-url('Geometos-Rounded.eot') format('embedded-opentype'), font-url('Geometos-Rounded.woff') format('woff');
+}
+@font-face {
+	   font-family: 'multicolore';
+	   font-style: normal;
+	   src: font-url('Multicolore.eot');
+	   src: local('multicolore'), font-url('Multicolore.eot') format('embedded-opentype'), font-url('Multicolore.woff') format('woff');
+}
+h2, h3 {
+    font-family: 'multicolore' !important;
+}
+h1{
+	font-family: 'geometos-rounded' !important;
+}

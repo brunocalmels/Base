@@ -1,0 +1,5 @@
+<% provide(:title, Ayuda') %>
+<h1>Ayuda</h1>
+<p>
+  Por el momento, podés pedirnos ayuda llenando el formulario en <%= link_to "macherit.com", "http://www.macherit.com/#contacto" %>.
+</p>

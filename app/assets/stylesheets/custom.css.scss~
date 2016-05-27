@@ -1,0 +1,91 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Colores Macher */
+$rojo_web: #e74700;
+$verde_app: #83aa30;
+$azul_mktg: #4D6684;
+$azul_asesoria: #1499D3;
+$gris: #3d3d3d;
+$verde_logo1: #41b28e;
+$verde_logo2: #018580;
+
+
+/* universal */
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+      margin-bottom: 10px;
+  }
+}
+
+.jumbotron ul {
+    list-style: none;
+    li {
+	margin: 10px; 
+    }
+}
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+      color: #fff;
+      text-decoration: none;
+      filter: hue-rotate(45deg);
+  }
+}
+
+.footer {
+	text-align: center;
+	background: $verde_logo1;
+	margin-top: 45px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 1em;
+	border-top: 1px solid #eaeaea;
+	color: #777;
+	a {
+	    color: #555;
+	    &:hover {
+		color: #222;
+	    }
+	}
+	small {
+	    float: left;
+	}
+	ul {
+	    float: right;
+	    list-style: none;
+	    li {
+		float: left;
+		margin-left: 15px;
+	    }
+	}
+	img {
+	    max-width: 300px;
+	}
+}
+
+.navbar img {
+	max-width: 70px;
+}

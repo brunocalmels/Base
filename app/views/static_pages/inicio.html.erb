@@ -1,8 +1,13 @@
-<% provide(:title, "Business Intelligence") %>
-<h1>Business Intelligence de Macher IT</h1>
-<h3>Inteligencia para los negocios</h3>
-<div>Desde acá podés:
-  <ul>
-    <li>Registrar una visita a un cliente <a class="button" href="#">Registrar</a></li>
-  </ul>
+<div class="center jumbotron">
+  <h1>Business Intelligence</h1>
+  <h3>Inteligencia para los negocios</h3>
+  <div>
+    <%= link_to "Registrate", registrarse_path, class: "btn btn-lg btn-primary", id: "bot_registrarse" %>
+  </div>
+  <div class="tareas">Desde acá podés:
+    <ul>
+    <li><%= link_to 'Cargar cliente', cliente_path, class: "btn btn-lg btn-secondary" %></li>
+    <li><%= link_to 'Cargar visita', visita_path, class: "btn btn-lg btn-secondary" %></li>
+    </ul>
+  </div>
 </div>
