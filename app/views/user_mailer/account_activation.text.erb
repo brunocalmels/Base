@@ -1,0 +1,5 @@
+Macher Business Intelligence
+
+<%= @greeting %>, <%= @user.name %>.
+Para activar tu cuenta, hacé clic en el siguiente enlace:
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>

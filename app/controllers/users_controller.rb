@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class UsersController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :index, :destroy]
   before_action :correct_user,   only: [:edit, :update]
@@ -18,9 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)    # Not the final implementation!
     if @user.save
-      log_in @user
-      flash[:success] = "Bienvenido #{@user.name}. Tu cuenta fue creada."
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Revisá tu casilla de correo para activar tu cuenta."
+      redirect_to root_url
     else
       render 'new'
     end
