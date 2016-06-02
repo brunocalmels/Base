@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   post 'loguearse' => 'sessions#create'
   delete 'desloguearse' => 'sessions#destroy'
   resources :users
-  resources :account_activation, only: [:edit]
+  resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:edit, :new, :update, :create]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

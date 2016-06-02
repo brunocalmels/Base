@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class User < ActiveRecord::Base
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
   validates :name, presence: true, length: { maximum: 50 }
@@ -42,6 +42,11 @@ class User < ActiveRecord::Base
     BCrypt::Password.new(digest).is_password?(token)
   end
 
+  # Devuelve true si el password está vencido
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   # Activa la cuenta
   def activate
     update_attribute(:activated,    true)
@@ -51,6 +56,18 @@ class User < ActiveRecord::Base
   # Envía el mail de activación
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  # Setea los atributos para el reset del password
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_attribute(:reset_digest,  User.digest(reset_token))
+    update_attribute(:reset_sent_at, Time.zone.now)
+  end
+
+  # Envía el mail de reseteo de password
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
   end
 
   private
